@@ -1,7 +1,11 @@
+const ConstactsRepository = require('../repositories/ContactsRepositorys');
+
 class ContactController {
   // lista de registros
-  index(request, response) {
-    response.send('Send from Contact Controller');
+  async index(request, response) {
+    const contacts = await ConstactsRepository.findAll();
+
+    response.json(contacts);
   }
 
   // registro unico
