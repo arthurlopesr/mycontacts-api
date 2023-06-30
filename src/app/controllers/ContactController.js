@@ -22,8 +22,26 @@ class ContactController {
   }
 
   // criar novo registro
-  store() {
+  async store(request, response) {
+    const {
+      name, email, phone, category_id,
+    } = request.body;
 
+    if (!name) {
+      return response.status(400).json({ error: 'Name is required' });
+    }
+
+    const constactExists = await ConstactsRepository.findByEmail(email);
+
+    if (constactExists) {
+      return response.status(400).json({ error: 'This e-mail is alrady been taken' });
+    }
+
+    const contact = await ConstactsRepository.create({
+      name, email, phone, category_id,
+    });
+
+    response.json(contact);
   }
 
   // editar um registro
