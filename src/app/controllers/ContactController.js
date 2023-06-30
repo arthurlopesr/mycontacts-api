@@ -9,8 +9,16 @@ class ContactController {
   }
 
   // registro unico
-  show() {
+  async show(request, response) {
+    const { id } = request.params;
+    const contact = await ConstactsRepository.findById(id);
 
+    if (!contact) {
+      // 404 - not found
+      return response.status(404).json({ error: 'User not found' });
+    }
+
+    response.json(contact);
   }
 
   // criar novo registro
@@ -24,8 +32,18 @@ class ContactController {
   }
 
   // deletar um registro
-  delete() {
+  async delete(request, response) {
+    const { id } = request.params;
+    const contact = await ConstactsRepository.findById(id);
 
+    if (!contact) {
+      // 404 - not found
+      return response.status(404).json({ error: 'User not found' });
+    }
+
+    await ConstactsRepository.delete(id);
+    // 204 - no content
+    response.sendStatus(204);
   }
 }
 
