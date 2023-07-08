@@ -2,9 +2,14 @@
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/DWLsHRv/logo.png" alt="logo" border="0"></a>
 </h1>
 
+<p align="center">
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E6&labelColor=121214" alt="License">
+</p>
+
 <h1 align="center">
     API | MyContacts
 </h1>
+
 
 * MyContacts é uma aplicação simples de gerenciamento de contatos, onde os usuários podem armazenar informações de contato, como nome, número de telefone e endereço de email. Este repositório contém o código-fonte da aplicação.
 
