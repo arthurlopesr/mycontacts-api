@@ -19,6 +19,7 @@
 * Docker
 * PostgreSQL
 
+
 ### 💻 Conceitos implantados - Back-end
 - Responsabilidade Única (Separados por folders controllers, repositories e middlewares)
 - [Conexão com o nosso Container no Docker (folder - database)](https://yarnpkg.com/package/pg)
