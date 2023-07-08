@@ -44,7 +44,7 @@ yarn | npm i
 yarn start | npm start
 ```
 
-### Doker 
+### Docker 
 * Baixando a imagem - postgres: docker pull postgres
 * Criando o container: docker run --name pg -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres (Já inicia automaticamente)
 * Caso não tenha iniciado o container, faça o seguinte comando: docker start pg
