@@ -6,6 +6,8 @@ class ContactController {
     const { orderBy } = request.query;
     const contacts = await ConstactsRepository.findAll(orderBy);
 
+    console.log({ contacts });
+
     response.json(contacts);
   }
 
@@ -16,7 +18,7 @@ class ContactController {
 
     if (!contact) {
       // 404 - not found
-      return response.status(404).json({ error: 'User not found' });
+      return response.status(404).json({ error: 'Contact not found' });
     }
 
     response.json(contact);
@@ -42,7 +44,7 @@ class ContactController {
       name, email, phone, category_id,
     });
 
-    response.json(contact);
+    response.status(201).json(contact);
   }
 
   // editar um registro
@@ -54,7 +56,7 @@ class ContactController {
 
     const contactExists = await ConstactsRepository.findById(id);
     if (!contactExists) {
-      return response.status(404).json({ error: 'User not found' });
+      return response.status(404).json({ error: 'Contact not found' });
     }
 
     if (!name) {
