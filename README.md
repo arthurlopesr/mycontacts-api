@@ -14,10 +14,13 @@
 * MyContacts é uma aplicação simples de gerenciamento de contatos, onde os usuários podem armazenar informações de contato, como nome, número de telefone e endereço de email. Este repositório contém o código-fonte da aplicação.
 
 ### 🛠️ Nesse projeto foi utilizado
-* Node.js
-* Express
-* Docker
-* PostgreSQL
+* [NodeJS](https://nodejs.org/en/)
+* [JavaScript](https://www.javascript.com/)
+* [Express](https://expressjs.com/pt-br/)
+* [Docker](https://www.docker.com/)
+* [Postgres](https://www.postgresql.org/)
+* [Eslint](https://eslint.org/)
+* [EditorConfig](https://editorconfig.org/)
 
 
 ### 💻 Conceitos implantados - Back-end
